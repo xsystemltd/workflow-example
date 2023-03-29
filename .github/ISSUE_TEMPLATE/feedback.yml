@@ -1,0 +1,65 @@
+name: Feedback
+description: Submit feedback
+title: "[Feedback]: "
+labels: ["triage"]
+body:
+  - type: dropdown
+    id: who
+    attributes:
+      label: Who reported this?
+      options:
+        - Customer
+        - Supplier
+        - Internal
+    validations:
+      required: true
+  - type: dropdown
+    id: feedback-kind
+    attributes:
+      label: What kind of feedback is this?
+      options:
+        - Complaint
+        - Internal
+        - Audit
+        - Improvement
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: (required)
+    validations:
+      required: true
+  - type: textarea
+    id: action-required
+    attributes:
+      label: Action Required
+      description: (required)
+    validations:
+      required: true
+  - type: textarea
+    id: action-taken
+    attributes:
+      label: Action Taken
+    validations:
+      required: false
+  - type: input
+    id: action-taken-by
+    attributes:
+      label: Action Taken By
+    validations:
+      required: false
+  - type: textarea
+    id: cause
+    attributes:
+      label: Cause
+    validations:
+      required: false
+  - type: input
+    id: cause-found-by
+    attributes:
+      label: Cause Found By
+    validations:
+      required: false
